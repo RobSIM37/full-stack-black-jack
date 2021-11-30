@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Begin Flex Settings */
+main, #table-info, #account-controls, .player-hand-area, .hand-controls, #dealer-area, #player-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main, #table-info, #account-controls, .hand-controls, #player-status {
+    justify-content: start;
+}
+
+.player-hand-area, #dealer-area {
+    justify-content: space-between;
+}
+
+#game-header, #game-controls, #game-buttons, .hand-wager {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#game-controls {
+    align-items: flex-start;
+}
+
+#game-header, #game-controls {
+    justify-content: space-between;
+}
+
+.hand-wager {
+    justify-content: center;
+}
+
+#player-area-wrapper {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-gap: 10px;
+}
+
+#account-number-title, #account-number {
+    text-align: center;
+}
+
+/* End Flex Settings */
+/* Begin Height/Width Settings */
+
+body, main {
+    width: 95vw;
+}
+
+#game-header {
+    width: 95vw;
+}
+
+#game-header>img, #game-header>div, #game-controls, .player-hand-area {
+    width: 400px;
+    height: 200px;
+}
+
+#account-controls>p, #account-controls>button {
+    width: 130px;
+} 
+
+#game-buttons>button {
+    width: 80px;
+    height: 40px;
+}
+
+/* End Height/Width Settings */
+/* Begin Margin/Padding Settings */
+
+main {
+    margin: 25px;
+}
+
+#game-header, #player-area-wrapper {
+    margin-bottom: 100px;
+}
+
+#game-header>div, .player-hand-area {
+    padding: 5px;
+}
+
+.label {
+    padding: 3px;
+}
+
+/* End Margin/Padding Settings */
+/* Begin Font and Text Size Settings */
+
+#account-number {
+    font-size: 15px;
+}
+
+/* End Font and Text Size Settings */
+/* Begin Color/Drawing Settings */
+
+body {
+    background-color: rgb(0, 128, 0);
+}
+
+#dealer-area, .not-focus {
+    border: 5px solid white;
+}
+
+.focus {
+    border: 5px solid gold;
+}
+
+p {
+    background: white;
+}
+
+.black {
+    color: black;
+}
+
+.red{
+    color: red;
+}
+
+.hide {
+    display: none;
+}
+
+/* End Color/Drawing Settings */

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Black Jack</title>
+    <link rel="stylesheet" href="/reset">
+    <link rel="stylesheet" href="/style"/>
+    <link rel="icon" href="/icon"/>
+</head>
+<body>
+    <main>
+        <section id="game-header">
+            <img src="./resources/fsbj-logo.png"/>
+            <div id="dealer-area">
+                <p class="cards"></p>
+                <p class="label">Dealer</p>
+            </div>
+            <secion id="game-controls">
+                <div id="table-info">
+                    <p id="table-minimum" class="label"></p>
+                    <p id="table-maximum" class="label"></p>
+                </div>
+                <div id="account-controls">
+                    <p id="account-number-title" class="hide">Account Number:</p>
+                    <p id="account-number" class="label hide"></p>
+                    <button id="open-account">Open Account</button>
+                    <button id="save-account" class="hide">Save Progress</button>
+                    <button id="load-account">Load Account</button>
+                </div>
+            </secion>
+        </section>
+        <section id="player-area-wrapper">
+            <div id="2" class="player-hand-area not-focus">
+                <p class="cards"></p>
+                <p class="wager"></p>
+            </div>
+            <div id="0" class="player-hand-area not-focus">
+                <p class="cards"></p>
+                <p class="wager"></p>
+            </div>
+            <div id="1" class="player-hand-area not-focus">
+                <p class="cards"></p>
+                <p class="wager"></p>
+            </div>
+            <div id="5" class="player-hand-area not-focus">
+                <p class="cards"></p>
+                <p class="wager"></p>
+            </div>
+            <div id="3" class="player-hand-area not-focus">
+                <p class="cards"></p>
+                <p class="wager"></p>
+            </div>
+            <div id="4" class="player-hand-area not-focus">
+                <p class="cards"></p>
+                <p class="wager"></p>
+            </div>
+        </section>
+        <form id="player-controls">
+            <input type="text" placeholder="Place Wager Here"/>
+            <button>Submit</button>
+        </form>
+        <div id="game-buttons">
+            <button id="hit" class="hide">Hit</button>
+            <button id="stand" class="hide">Stand</button>
+            <button id="double" class="hide">Double Down</button>
+            <button id="split" class="hide">Split</button>
+        </div> 
+        <section id="player-status">
+            <p id="status" class="hide label">Hand in progress</p>
+            <button id="continue" class="hide">Continue</button>
+            <p id="player-chip-total" class="label"></p>
+        </section>
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/disp-set"></script>
+    <script src="/logic-set"></script>
+    <script src="/logic-model"></script>
+    <script src="/logic-ctrl"></script>
+    <script src="/disp-ctrl"></script>
+    <script src="/save"></script>
+</body>
+</html>
