@@ -9,6 +9,8 @@ const newBtn = document.querySelector('#open-account');
 const saveBtn = document.querySelector('#save-account');
 const loadBtn = document.querySelector('#load-account');
 
+let acctAttempt = 0;
+
 const hideAllAccountElements=()=> {
 
     hide(title);
@@ -40,6 +42,7 @@ const chipsResponseHandler=res=> {
     
     const {chips} = res.data;
     player.chips = chips;
+    acctNumber.innerText = acctAttempt;
     showAccount();
     document.querySelector('#player-chip-total').innerText = `Chip Total: $${chips}`;
 
@@ -101,6 +104,7 @@ const loadBtnEventHandler=event=> {
     const account = parseInt(enteredAccount);
 
     if (isValidAccountNumberFormat(account)) {
+        acctAttempt = account;
         loadCall(account);
     } else {
         alert("Please enter a valid Accout Number. \nIt must only contain numbers and must be 16 digits long.");
