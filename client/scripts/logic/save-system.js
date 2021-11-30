@@ -1,4 +1,5 @@
-const baseAcctURL = 'http://localhost:5252/api/account/';
+// const baseAcctURL = 'http://localhost:5252/api/account/';
+const baseAcctURL = 'https://full-stack-black-jack.herokuapp.com/api/account/';
 const accountMax = 9000000000000000;
 const accountMin = 1000000000000000;
 
@@ -39,6 +40,7 @@ const chipsResponseHandler=res=> {
     
     const {chips} = res.data;
     player.chips = chips;
+    showAccount();
     document.querySelector('#player-chip-total').innerText = `Chip Total: $${chips}`;
 
 }

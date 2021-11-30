@@ -20,8 +20,7 @@ class Card {
 }
 
 class Shoe {
-    constructor(deck, deckCount, reshufflePoint) {
-        this.deck = deck;
+    constructor(deckCount, reshufflePoint) {
         this.deckCount = deckCount;
         this.reshufflePoint = reshufflePoint;
         this.cardPool = [];
@@ -30,9 +29,25 @@ class Shoe {
 
     buildShoe(){
         this.cardPool.length = 0;
+
+        const cardBackImage = '<span class="gold">\u{1F0A0}</span>';
+        const deck = [];
+        const suits = ['C', 'D', 'H', 'S'];
+        const faceValues = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'];
+        const values = [2,3,4,5,6,7,8,9,10,10,10,10,11];
+
+        const clubs = ['<span class="black">\u{1F0D2}</span>','<span class="black">\u{1F0D3}</span>','<span class="black">\u{1F0D4}</span>','<span class="black">\u{1F0D5}</span>','<span class="black">\u{1F0D6}</span>','<span class="black">\u{1F0D7}</span>','<span class="black">\u{1F0D8}</span>','<span class="black">\u{1F0D9}</span>','<span class="black">\u{1F0DA}</span>','<span class="black">\u{1F0DB}</span>','<span class="black">\u{1F0DD}</span>','<span class="black">\u{1F0DE}</span>','<span class="black">\u{1F0D1}</span>']
+        const diamonds = ['<span class="red">\u{1F0C2}</span>','<span class="red">\u{1F0C3}</span>','<span class="red">\u{1F0C4}</span>','<span class="red">\u{1F0C5}</span>','<span class="red">\u{1F0C6}</span>','<span class="red">\u{1F0C7}</span>','<span class="red">\u{1F0C8}</span>','<span class="red">\u{1F0C9}</span>','<span class="red">\u{1F0CA}</span>','<span class="red">\u{1F0CB}</span>','<span class="red">\u{1F0CD}</span>','<span class="red">\u{1F0CE}</span>','<span class="red">\u{1F0C1}</span>']
+        const hearts = ['<span class="red">\u{1F0B2}</span>','<span class="red">\u{1F0B3}</span>','<span class="red">\u{1F0B4}</span>','<span class="red">\u{1F0B5}</span>','<span class="red">\u{1F0B6}</span>','<span class="red">\u{1F0B7}</span>','<span class="red">\u{1F0B8}</span>','<span class="red">\u{1F0B9}</span>','<span class="red">\u{1F0BA}</span>','<span class="red">\u{1F0BB}</span>','<span class="red">\u{1F0BD}</span>','<span class="red">\u{1F0BE}</span>','<span class="red">\u{1F0B1}</span>']
+        const spades = ['<span class="black">\u{1F0A2}</span>','<span class="black">\u{1F0A3}</span>','<span class="black">\u{1F0A4}</span>','<span class="black">\u{1F0A5}</span>','<span class="black">\u{1F0A6}</span>','<span class="black">\u{1F0A7}</span>','<span class="black">\u{1F0A8}</span>','<span class="black">\u{1F0A9}</span>','<span class="black">\u{1F0AA}</span>','<span class="black">\u{1F0AB}</span>','<span class="black">\u{1F0AD}</span>','<span class="black">\u{1F0AE}</span>','<span class="black">\u{1F0A1}</span>']
+        const cardArray = [clubs, diamonds, hearts, spades];
+
         for (let d=0; d<this.deckCount; d++){
-            for(let c=0; c<this.deck.length; c++){
-                this.cardPool.push(this.deck[c]);
+            for (let s=0; s<suits.length; s++) {
+                for (let v=0; v<values.length; v++) {
+                    const uniCode = cardArray[s][v];
+                    this.cardPool.push(new Card(values[v], faceValues[v], suits[s], uniCode, true, cardBackImage));
+                }
             }
         }
     }
