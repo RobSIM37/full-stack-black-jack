@@ -23,6 +23,5 @@ app.put(`${acctURL}`, acctCtrl.saveAccount);
 app.get(`${acctURL}:account`, acctCtrl.loadAccount);
 
 const port = process.env.PORT || 5252
-// const port = 5252;
 
 app.listen(port, ()=>console.log(`Server running on ${port}`));
