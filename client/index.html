@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Stack Black Jack</title>
-    <link rel="stylesheet" href="/reset">
+
+    <!-- <link rel="stylesheet" href="/reset">
     <link rel="stylesheet" href="/style"/>
-    <link rel="icon" href="/icon"/>
+    <link rel="icon" href="/icon"/> -->
+    
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styles.css"/>
+    <link rel="icon" href="./resources/icon.png"/>
 </head>
 <body>
     <main>
@@ -74,11 +79,19 @@
         </section>
     </main>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="/disp-set"></script>
+
+    <!-- <script src="/disp-set"></script>
     <script src="/logic-set"></script>
     <script src="/logic-model"></script>
     <script src="/logic-ctrl"></script>
     <script src="/disp-ctrl"></script>
-    <script src="/save"></script>
+    <script src="/save"></script> -->
+
+    <script src="./scripts/display/display-settings.js"></script>
+    <script src="./scripts/logic/logic-settings.js"></script>
+    <script src="./scripts/logic/black-jack-model.js"></script>
+    <script src="./scripts/logic/black-jack-logic-controller.js"></script>
+    <script src="./scripts/display/display-controller.js"></script>
+    <script src="./scripts/logic/save-system.js"></script>
 </body>
 </html>
