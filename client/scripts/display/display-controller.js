@@ -16,7 +16,7 @@ const updatePlayerChipTotal=()=> {
 }
 
 const updateDealerCards=()=> {
-    dealerHandDisplay.innerText = updateDisplay('dealer hand');
+    dealerHandDisplay.innerHTML = updateDisplay('dealer hand');
 }
 
 const updateStatusMessage=str=> {
@@ -100,7 +100,7 @@ const updateAllDisplays=status=> {
     for (let i=0; i<playerHands.length; i++) {
 
         if (playerHands[i]) {
-            playerHandDisplays[i].querySelector('.cards').innerText = playerHands[i].displayString();
+            playerHandDisplays[i].querySelector('.cards').innerHTML = playerHands[i].displayString();
             playerHandDisplays[i].querySelector('.wager').innerText = playerHands[i].wager;
         } else {
             playerHandDisplays[i].querySelector('.cards').innerText = '';

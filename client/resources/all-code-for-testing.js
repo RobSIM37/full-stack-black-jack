@@ -196,8 +196,8 @@ class Hand {
 
     }
 
-    displayString() {
-        return this.cards.map(c=>c.display()).join(' ');;
+    displayString(check) {
+        return this.cards.map(c=>c.display()).join(' ');
     }
 
     isBlackJack() {
@@ -264,13 +264,14 @@ const updateDisplay=str=> {
 
         case 'player hands':
 
-            for (let h=0; h<player.hands.length; h++) {
-                const hand = player.hands[h];
-                for (let c=0; c<hand.cards.length; c++) {
-                    const card = hand.cards[c];
-                    card.faceUp = true;
-                }
-            }
+            // for (let h=0; h<player.hands.length; h++) {
+            //     const hand = player.hands[h];
+            //     for (let c=0; c<hand.cards.length; c++) {
+            //         const card = hand.cards[c];
+            //         card.faceUp = true;
+            //     }
+            // }
+
             return player.hands;
 
         case 'active hand':
@@ -515,7 +516,7 @@ const updateAllDisplays=str=> {
     console.log('player chips =>', updateDisplay('player chips'));
     console.log('dealer hand =>', updateDisplay('dealer hand'));
     const displayHands = updateDisplay('player hands');
-    console.log('player hand', displayHands[0].displayString(), ' =>', displayHands[0].calculatedValue())
+    console.log('player hand', displayHands[0].displayString(true), ' =>', displayHands[0].calculatedValue())
     console.log('active hand =>', updateDisplay('active hand'));
 
     if (displayHands[0].displayString().includes('#')) {

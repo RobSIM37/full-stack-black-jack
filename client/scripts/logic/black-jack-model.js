@@ -1,8 +1,10 @@
 class Card {
-    constructor(value, faceValue, suit, faceUp, cardBack){
+    constructor(value, faceValue, suit, uniCode, faceUp, cardBack){
+
         this.value = value;
         this.faceValue = faceValue;
         this.suit = suit;
+        this.uniCode = uniCode;
         this.faceUp = faceUp;
         this.cardBack = cardBack;
 
@@ -10,7 +12,7 @@ class Card {
 
     display() {
         if (this.faceUp) {
-            return `${this.faceValue}${this.suit}`
+            return `${this.uniCode}`
         } else {
             return `${this.cardBack}`
         }
@@ -181,7 +183,7 @@ class Hand {
     }
 
     displayString() {
-        return this.cards.map(c=>c.display()).join(' ');;
+        return this.cards.map(c=>c.display()).join('');
     }
 
     isBlackJack() {

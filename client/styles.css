@@ -96,6 +96,10 @@ main {
     font-size: 15px;
 }
 
+span {
+    font-size: 100px;
+}
+
 /* End Font and Text Size Settings */
 /* Begin Color/Drawing Settings */
 
@@ -121,6 +125,10 @@ p {
 
 .red{
     color: red;
+}
+
+.gold{
+    color: gold;
 }
 
 .hide {
