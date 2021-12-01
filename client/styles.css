@@ -120,6 +120,9 @@ p {
     color: white;
 }
 
+span {
+    background: white;
+}
 .black {
     color: black;
 }
