@@ -101,7 +101,7 @@ const updateAllDisplays=status=> {
 
         if (playerHands[i]) {
             playerHandDisplays[i].querySelector('.cards').innerHTML = playerHands[i].displayString();
-            playerHandDisplays[i].querySelector('.wager').innerText = playerHands[i].wager;
+            playerHandDisplays[i].querySelector('.wager').innerText = `$${playerHands[i].wager}`;
         } else {
             playerHandDisplays[i].querySelector('.cards').innerText = '';
             playerHandDisplays[i].querySelector('.wager').innerText = '';
