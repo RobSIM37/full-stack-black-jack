@@ -18,14 +18,6 @@ const updateDisplay=str=> {
             return dealer.hand.displayString();
 
         case 'player hands':
-
-            for (let h=0; h<player.hands.length; h++) {
-                const hand = player.hands[h];
-                for (let c=0; c<hand.cards.length; c++) {
-                    const card = hand.cards[c];
-                    card.faceUp = true;
-                }
-            }
             
             return player.hands;
 
