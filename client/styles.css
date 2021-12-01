@@ -116,7 +116,8 @@ body {
 }
 
 p {
-    background: white;
+    background: green;
+    color: white;
 }
 
 .black {
