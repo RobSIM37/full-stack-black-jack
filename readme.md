@@ -14,6 +14,10 @@ The file index.js in the server folder is set designed to run the back end serve
 $ nodemon
 ```
 
+## Three Required Features
+
+So, there is a definitional question here: Is playing Blackjack one feature or can you count game actions (such as hitting, standing, doubling down, or splitting) as individual features? If I play it safe and say that playing the game is one feature, then the other two would be the ability to save your current chip total to an in game "account" and re-loading your chips from that account during future sessions.
+
 ## File Structure
 
 The project is first divided into "client" and "server" folders, each containing the files for the front and back ends respectively. 

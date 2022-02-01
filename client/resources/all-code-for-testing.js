@@ -555,7 +555,7 @@ function test() {
         if (!playerEntersWager(testWager)) {
             console.log('invalid wager');
         }
-        playerHits();
+        playerDoublesDown();
         resetLogic();
     }
 }
